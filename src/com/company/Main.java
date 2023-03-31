@@ -3,6 +3,8 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
+//shouldnt be in a separate repository 
+
 public class Main {
 
     private final static char[][] board =
