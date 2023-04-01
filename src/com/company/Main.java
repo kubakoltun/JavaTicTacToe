@@ -3,7 +3,8 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-//shouldnt be in a separate repository 
+//develop the game so it could be cosidered as a project
+//ideas are: UI, simple AI enemy
 
 public class Main {
 
