@@ -5,17 +5,13 @@ import java.util.Scanner;
 
 //develop the game so it could be cosidered as a project
 //ideas are: UI, simple AI enemy
-
 public class Main {
-
     private final static char[][] board =
             {{' ', ' ', ' '},
             {' ', ' ', ' '},
             {' ', ' ', ' '}};
     private static boolean computer = true;
-
     private final static Scanner input = new Scanner(System.in);
-
     private static boolean checkResult() {
         if ((board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[2][0] != ' ') ||
                 (board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[2][1] != ' ') ||
@@ -44,7 +40,6 @@ public class Main {
     }
 
     private static void computerMove() {
-
         for (int i=0; i<3; i++) {
             if (board[i][0] == 'X' && board[i][1] == 'X' && board[i][2] == ' ') {
                 board[i][2] = 'X';
@@ -211,7 +206,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
         while (!checkResult()) {
             printTable();
             if (computer) {
@@ -222,5 +216,4 @@ public class Main {
         }
         printTable();
     }
-
 }
