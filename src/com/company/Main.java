@@ -12,6 +12,7 @@ public class Main {
             {' ', ' ', ' '}};
     private static boolean computer = true;
     private final static Scanner input = new Scanner(System.in);
+    
     private static boolean checkResult() {
         if ((board[0][0] == board[1][0] && board[1][0] == board[2][0] && board[2][0] != ' ') ||
                 (board[0][1] == board[1][1] && board[1][1] == board[2][1] && board[2][1] != ' ') ||
@@ -66,6 +67,7 @@ public class Main {
                 return;
             }
         }
+        
         if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == ' ') {
             board[2][2] = 'X';
             return;
@@ -117,6 +119,7 @@ public class Main {
                 return;
             }
         }
+        
         if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == ' ') {
             board[2][2] = 'X';
             return;
@@ -145,6 +148,7 @@ public class Main {
         boolean done = false;
         Random random = new Random();
         int a,b;
+        
         while (!done) {
             a = random.nextInt(3);
             b = random.nextInt(3);
@@ -162,11 +166,13 @@ public class Main {
             String coord = input.next();
             if (coord.length() != 2) {
                 System.out.println("Invalid coordinates");
-            } else if (coord.charAt(0) != 'a' &&
+            } 
+            else if (coord.charAt(0) != 'a' &&
                     coord.charAt(0) != 'b' &&
                     coord.charAt(0) != 'c') {
                 System.out.println("Invalid beginning of coordinates start with letter");
-            }  else if (coord.charAt(1) != '1' &&
+            } 
+            else if (coord.charAt(1) != '1' &&
                     coord.charAt(1) != '2' &&
                     coord.charAt(1) != '3') {
                 System.out.println("Invalid ending of coordinates end with number");
@@ -174,14 +180,16 @@ public class Main {
                 int a, b;
                 if (coord.charAt(0) == 'a') {
                     a = 0;
-                } else if (coord.charAt(0) == 'b') {
+                } 
+                else if (coord.charAt(0) == 'b') {
                     a = 1;
                 } else {
                     a = 2;
                 }
                 if (coord.charAt(1) == '1') {
                     b = 0;
-                } else if (coord.charAt(1) == '2') {
+                } 
+                else if (coord.charAt(1) == '2') {
                     b = 1;
                 } else {
                     b = 2;
@@ -202,7 +210,6 @@ public class Main {
         System.out.println("a   " + board[0][0]+ "|" + board[0][1]+ "|" + board[0][2]);
         System.out.println("b   " + board[1][0]+ "|" + board[1][1]+ "|" + board[1][2]);
         System.out.println("c   " + board[2][0]+ "|" + board[2][1]+ "|" + board[2][2]);
-
     }
 
     public static void main(String[] args) {
